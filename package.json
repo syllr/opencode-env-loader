@@ -1,15 +1,15 @@
 {
   "name": "opencode-env-loader",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "OpenCode plugin to auto-load project environment before shell execution",
   "main": "src/index.js",
   "type": "module",
   "files": [
     "src",
-    "examples"
+    "skills"
   ],
   "scripts": {
-    "test": "echo \"No tests yet\" && exit 0"
+    "test": "vitest run"
   },
   "keywords": [
     "opencode",
@@ -25,7 +25,9 @@
     "url": "https://github.com/your-username/opencode-env-loader.git"
   },
   "peerDependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "vitest": "^2"
+  },
   "engines": {
     "node": ">=18.0.0"
   }
