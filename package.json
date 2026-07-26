@@ -1,15 +1,22 @@
 {
   "name": "opencode-env-loader",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "OpenCode plugin to auto-load project environment before shell execution",
   "main": "src/index.js",
   "type": "module",
   "files": [
-    "src",
-    "skills"
+    "src/index.js",
+    "src/parser.js",
+    "src/shell-env.js",
+    "src/plugin.js",
+    "skills",
+    "README.md",
+    "CHANGELOG.md",
+    "UPGRADING.md"
   ],
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "opencode",
@@ -22,7 +29,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/opencode-env-loader.git"
+    "url": "https://github.com/syllr/opencode-env-loader.git"
   },
   "peerDependencies": {},
   "devDependencies": {
