@@ -1,5 +1,21 @@
 # 更新日志
 
+## v2.0.4 (2026-09-05)
+
+### 新增
+
+#### project-env-init 自动忽略本地环境文件
+
+`env-loader/` 下全是本机绝对路径，提交进 `git` 只会冲突。`skill` 新增第 7 步（所有语言必做）：先判断是否为 `git` 项目，非 `git` 项目跳过；检查项目根 `.gitignore`，缺失则追加 `.opencode/env-loader/` 一行（已含则跳过，只忽略该子目录，不忽略整个 `.opencode/`）。
+
+## v2.0.3 (2026-09-05)
+
+### 新增
+
+#### project-env-init 支持 pyright 诊断配置
+
+`env-loader` 注入的 `VIRTUAL_ENV` 只对 `bash` 工具链生效，内嵌 `pyright` 不读 `shell` 环境变量，缺配置时会回落系统 `Python` 并误报 `Import could not be resolved`。`project-env-init` 新增“各语言额外处理 / Python”子章节：定位第 1 步找到 `pyproject.toml` 的目录，确认 `.venv` 存在且缺 `pyrightconfig.json` / `[tool.pyright]` 时，默认生成与 `.venv` 同级的 `pyrightconfig.json`（固定模板 `{"venvPath": ".", "venv": ".venv"}`），并提醒重启 `opencode` 生效。
+
 ## v2.0.2 (2026-07-26)
 
 ### 修复

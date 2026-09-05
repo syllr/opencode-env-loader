@@ -1,6 +1,6 @@
 {
   "name": "opencode-env-loader",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "OpenCode plugin to auto-load project environment before shell execution",
   "main": "src/index.js",
   "type": "module",
